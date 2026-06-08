@@ -1,152 +1,49 @@
-# Helios Connected Device Cloud
+# Helios Connected Experience Platform — CGP3
 
-A premium cloud-native Connected Services and IoT platform built with Java Spring Boot microservices, Kafka-style event streaming, Docker, Kubernetes-ready architecture, PostgreSQL, Redis-ready caching, and a high-end 3D React/Next.js product experience website.
+A premium, recruiter-ready Connected Services and IoT ecosystem built for Java/Spring Boot microservices roles. The project combines a Tesla-grade / Apple-style 3D product storytelling website with Java 21 Spring Boot APIs, Kafka-oriented event streaming design, Docker, Kubernetes and cloud-native architecture.
 
-This project is designed to demonstrate enterprise backend engineering, real-time platforms, connected products, distributed systems fundamentals, and premium product storytelling for roles focused on Java, Spring Boot, microservices, Kafka, cloud-native engineering, and IoT ecosystems.
+## Why this project exists
+This project is aligned to Cognizant Junior Java Engineer requirements: Java, Spring Boot, REST APIs, microservices, Kafka/messaging, distributed systems, connected services, IoT ecosystems, Docker, Kubernetes, SDLC and cloud-native development.
 
-## Why This Project Exists
+## Features
+- Premium Next.js product website with React Three Fiber 3D product scenes
+- Scroll-based product storytelling for EV, wearable, camera, thermostat and energy hub
+- Digital Twin section showing battery, temperature, firmware, connectivity and last events
+- Command Center visualizing real-time Kafka-style event flows
+- Java 21 Spring Boot backend with REST APIs for devices, telemetry and commands
+- Kafka-ready publisher design and Docker Compose infrastructure
+- Kubernetes manifests and GitHub Actions CI
 
-Helios simulates the kind of Connected Services platform used by smart product companies to monitor, control, and analyze connected devices such as smart EVs, thermostats, cameras, watches, speakers, and energy meters.
-
-The project includes:
-
-- Premium 3D product website with scroll-driven storytelling
-- Connected product gallery
-- Digital twin dashboard
-- Real-time telemetry simulation
-- Java Spring Boot REST APIs
-- Kafka-style event design
-- Dockerized frontend and backend
-- Kubernetes-ready deployment manifests
-- ATS-focused architecture documentation
-
-## Tech Stack
-
-### Frontend
-
-- Next.js
-- React
-- TypeScript
-- Three.js
-- React Three Fiber
-- Framer Motion
-- Tailwind-style premium CSS
-- Scroll-based product storytelling
-
-### Backend
-
-- Java 21
-- Spring Boot 3
-- REST APIs
-- Microservices-style layered architecture
-- PostgreSQL-ready persistence model
-- Kafka event design
-- Docker
-- Maven
-
-### DevOps
-
-- Docker Compose
-- GitHub Actions
-- Kubernetes manifests
-
-## Project Structure
-
-```text
-helios-connected-device-cloud/
-├── frontend/                 # Premium 3D product experience website
-├── backend/                  # Java Spring Boot connected device API
-├── docs/                     # Architecture and resume documentation
-├── k8s/                      # Kubernetes deployment examples
-├── docker-compose.yml
-└── README.md
-```
-
-## Core Features
-
-### Premium 3D Website
-
-The website is not a simple dashboard. It is a high-end product showcase inspired by Tesla, Apple, Mercedes-Benz, Google Nest, and Samsung SmartThings.
-
-It includes:
-
-- Cinematic full-screen 3D hero
-- Scroll-based product movement and feature reveals
-- Floating product cards
-- Glassmorphism sections
-- Device command center
-- Digital twin product views
-- Kafka event stream visualization
-- Architecture showcase
-
-### Connected Device Platform
-
-Backend APIs support:
-
-- Device registration
-- Product inventory
-- Real-time telemetry ingestion
-- Device health monitoring
-- Command execution
-- Alert generation
-- Event stream simulation
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/devices` | List connected devices |
-| GET | `/api/devices/{id}` | Get device by ID |
-| POST | `/api/devices` | Register a new device |
-| POST | `/api/telemetry` | Ingest telemetry event |
-| GET | `/api/events/recent` | View recent device events |
-| POST | `/api/commands` | Send command to device |
-
-## Local Setup
-
-### Run Backend
-
-```bash
-cd backend
-./mvnw spring-boot:run
-```
-
-Backend runs on:
-
-```text
-http://localhost:8080
-```
-
-### Run Frontend
-
+## Run Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+Open `http://localhost:3000` or the port shown in terminal.
 
-Frontend runs on:
-
-```text
-http://localhost:3000
-```
-
-### Run With Docker Compose
-
+## Run Backend
 ```bash
-docker compose up --build
+cd backend
+mvn spring-boot:run
+```
+APIs run on `http://localhost:8080`.
+
+## Run Kafka/Postgres
+```bash
+docker compose up -d
 ```
 
-## Resume Bullet
+## APIs
+- `GET /api/devices`
+- `GET /api/devices/{id}`
+- `GET /api/telemetry/{id}`
+- `POST /api/devices/{id}/command`
+- `GET /api/events`
 
-**Helios Connected Device Cloud** — Java, Spring Boot, Kafka, PostgreSQL, Docker, Kubernetes, React, Three.js, AWS
-
-- Developed a cloud-native Connected Services platform for monitoring and managing IoT products through Java Spring Boot microservices and event-driven architecture.
-- Built REST APIs for device registration, telemetry ingestion, command execution, health monitoring, and real-time event visualization.
-- Designed Kafka-based streaming workflows for asynchronous telemetry processing between distributed services.
-- Created a premium 3D React/Three.js product experience website with scroll-driven product storytelling and digital twin visualization.
-- Containerized frontend and backend services using Docker and prepared Kubernetes deployment manifests for cloud-native deployment.
-
-## ATS Keywords Covered
-
-Java, Spring Boot, Microservices, REST APIs, Kafka, RabbitMQ, Event-Driven Architecture, Distributed Systems, Docker, Kubernetes, Cloud Native, PostgreSQL, Redis, IoT, Connected Services, Real-Time Platform, CI/CD, GitHub Actions, API Integration, SDLC, Agile, Unit Testing, Debugging.
+## Resume Entry
+**Helios Connected Experience Platform** — Java, Spring Boot, Kafka, PostgreSQL, Docker, Kubernetes, Next.js, Three.js
+- Built a cloud-native Connected Services and IoT platform for monitoring and controlling smart products through Java Spring Boot REST APIs and event-driven architecture.
+- Developed Kafka-oriented telemetry and command workflows to simulate real-time communication between connected products and backend microservices.
+- Created a premium 3D product experience using Next.js, React Three Fiber and Apple-style scroll storytelling for digital twin visualization.
+- Designed backend APIs for device registration, telemetry access, command execution and event monitoring with Docker/Kubernetes deployment support.

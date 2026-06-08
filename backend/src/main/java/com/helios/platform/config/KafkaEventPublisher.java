@@ -1,0 +1,1 @@
+package com.helios.platform.config;import org.springframework.stereotype.Component;@Component public class KafkaEventPublisher{public void publish(String topic,Object event){System.out.println("Publishing event to Kafka topic: "+topic+" payload="+event);}}

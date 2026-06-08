@@ -1,16 +1,12 @@
-spring:
-  application:
-    name: helios-connected-device-cloud
 server:
   port: 8080
+spring:
+  application:
+    name: helios-connected-experience-platform
+  kafka:
+    bootstrap-servers: localhost:9092
 management:
   endpoints:
     web:
       exposure:
         include: health,info,metrics
-helios:
-  kafka:
-    topics:
-      telemetry: helios.telemetry.received
-      command: helios.command.sent
-      alert: helios.alert.generated
