@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helios-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helios-frontend
+  template:
+    metadata:
+      labels:
+        app: helios-frontend
+    spec:
+      containers:
+        - name: helios-frontend
+          image: helios/device-cloud-frontend:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helios-frontend-service
+spec:
+  selector:
+    app: helios-frontend
+  ports:
+    - port: 3000
+      targetPort: 3000
+  type: LoadBalancer
